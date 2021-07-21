@@ -45,6 +45,7 @@
     </form>
     <span class="error" style="display:none">Formulaire invalide</span>
     <span class="success" style="display:none">Mail envoyé</span>
+    <span class="formok" style="display:none">Formulaire OK</span>
 
 </body>
 

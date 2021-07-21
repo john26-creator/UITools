@@ -26,6 +26,12 @@ input, textarea {
     padding: 20px;
     border-radius: 5px;
     font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(226, 223, 223);
 }
 
 input[name=nom] {
@@ -56,35 +62,49 @@ input[type=submit] {
     grid-area: submit;
 }
 
-input[type=submit]:hover {
-    font-size: 150%;
+input[type=submit]:disabled {
+    /* font-size: 150%; */
     opacity: 0.8;
 }
+
+
 
 .invalid {
     background-color: rgb(233, 75, 75);
     background: rgb(233, 75, 75);
+    opacity: 0.8;
 }
 
 .valid {
     background-color: green;
     background: green;
+    opacity: 0.8;
 }
 
 .error {
     position: relative;
     width: 90%;
     margin: auto;
-    background-color: rgb(238, 160, 160);
+    background-color: rgb(240, 114, 114);
     text-align: center;
     color: red;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0.8;
+    font-weight: bold;
+    padding: 10px;
 }
 
-.success {
+.success, .formok {
     position: relative;
     width: 90%;
     margin: auto;
     background-color: rgb(153, 221, 153);
     text-align: center;
     color: green;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0.8;
+    font-weight: bold;
+    padding: 10px;
 }

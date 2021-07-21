@@ -1,0 +1,136 @@
+.header {
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  --main-bg-color: black;
+  --header-link-color: white;
+  background-color: var(--main-bg-color);
+  position: fixed;
+  opacity: .8;
+}
+
+.header>.logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 25px 20px;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.header>ul {
+  list-style-type: none;
+}
+
+.header>.logo:hover {
+  color: var(--header-link-color);
+}
+
+.header>.logo:visited {
+  color: var(--header-link-color);
+}
+
+.header>.menu>li>a {
+  text-decoration: none;
+  color: var(--header-link-color);
+}
+.header>.menu>li>a:visited {
+  
+  color: var(--header-link-color);
+}
+.header>.menu>li>a:active {
+  color: var(--header-link-color);
+}
+
+
+@media (min-width:48em) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header>.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+
+  .header>.menu>li {
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .header>.menu>li:hover {
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 255, .2);
+    border-radius: 10%;
+  }
+ 
+}
+
+@media (max-width:48em) {
+  .header {
+    z-index: 3;
+    margin: auto;
+    font-family: Helvetica, sans-serif;
+  }
+
+  .header>.menu {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+
+
+  .header>.menu>li {
+    padding: 10px;
+    background-color: black;
+    font-size: larger;
+  }
+
+  .header>.menu>li:hover {
+    text-align: center;
+  }
+
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    width: 10%;
+  }
+  .header .menu-icon .navicon {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+  }
+  .header .menu-icon .closed {
+    z-index: 5;
+    background-image: url('images/menu/buger.png');
+  }
+  .header .menu-icon .opened {
+    z-index: 5;
+    background-image: url('images/menu/croix.png');
+  }
+
+  .header>ul.visible {
+    display:flex;
+  }
+
+  .header>ul.invisible {
+    display:none;
+  }
+}
